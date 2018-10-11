@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Restore') {
+            steps {
+                echo 'Restoring...'
+                bat "dotnet"
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building 123..'
+                bat "dotnet"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
