@@ -1,0 +1,42 @@
+﻿@model MvcCrud.Models.Tarefas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Tarefas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeResponsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailResponsavel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTarefa }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

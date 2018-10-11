@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MvcCrud.Models.Tarefas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova Tarefa", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeResponsavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailResponsavel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailResponsavel)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdTarefa }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IdTarefa }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.IdTarefa })
+        </td>
+    </tr>
+}
+
+</table>
