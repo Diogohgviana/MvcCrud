@@ -5,13 +5,13 @@ pipeline {
         stage('Restore') {
             steps {
                 echo 'Restoring...'
-                bat "dotnet"
+                bat "dotnet restore"
             }
         }
         stage('Build') {
             steps {
                 echo 'Building 123..'
-                bat "dotnet"
+                bat "dotnet build"
             }
         }
         stage('Deploy') {
